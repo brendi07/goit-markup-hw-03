@@ -4,10 +4,10 @@
 --accent-color: #2196F3;
 --accent-color-button: #188CE8;
 --primaty-white-color: #FFFFFF;
---primary-background-color:#F5F5F5;
+--primary-background-color: #fff;
 --background-color-title: #2F303A;
 --portfolio-button-color: #F5F4FA;
---header-border-color: #ECECEC
+--header-border-color: #ECECEC;
 --portfolio-border-color: #EEEEEE;
 }
 
@@ -15,8 +15,8 @@ body {
     font-family: "Roboto", sans-serif;
     font-size: 14px;
     letter-spacing: 0.03em;
-    background-color: var(--primary-background-color);
     color: var(--primary-text-color);
+    background-color: #fff;
 }
 
 .list {
@@ -51,8 +51,7 @@ padding: 0;
 /*header*/
 
 .header {
-    border: 1px solid;
-    border-color: var(--header-border-color)
+    border-bottom: 1px solid var(--header-border-color);
 }
 
 .header .conteiner {
@@ -141,6 +140,9 @@ letter-spacing: 0.02em;
 }
 
 .hero-title {
+    width: 696px;
+    margin-left: auto;
+    margin-right: auto;
     margin-bottom: 30px;
     color: var(--primaty-white-color);
     font-weight: 900;
@@ -223,6 +225,12 @@ text-align: center;
     display: flex;
  }
 
+ .works .list img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+ }
+
 .works .list .item:not(:last-child) {
     margin-right: 30px;
 }
@@ -249,8 +257,12 @@ text-align: center;
     background-color: var(--primaty-white-color);
 }
 
-.team-names {
+.box-team {
     margin-top: 30px;
+    margin-bottom: 30px;
+}
+
+.team-names {
     margin-bottom: 10px;
 font-weight: 500;
 font-size: 16px;
@@ -259,7 +271,6 @@ text-align: center;
 }
 
 .team-text {
-    margin-bottom: 30px;
 font-size: 16px;
 line-height: 1.19;
 text-align: center;
@@ -285,9 +296,15 @@ color: var(--secondary-text-color);
 }
 
 .footer-text {
+    margin-bottom: 9px;
 line-height: 1.71;
 color: var(--primaty-white-color);
 }
+
+.adress-item:not(:last-child) {
+    margin-bottom: 9px;
+}
+
 .footer-link {
     line-height: 1.71;
     color: rgba(255, 255, 255, 0.6);
@@ -299,10 +316,14 @@ color: var(--primaty-white-color);
 
 /*PORTFOLIO*/
 
-.conteiner-btn .list {
+.portfolio-btn-list {
     display: flex;
     justify-content: center;
-    margin-bottom: 50px;
+margin-bottom: 34px;
+}
+
+.portfolio-btn-item:not(:last-child) {
+    margin-right: 8px;
 }
 
 .portfolio-btn {
@@ -322,16 +343,27 @@ color: var(--primaty-white-color);
     background-color: var(--accent-color);
 }
 
-.portfolio .list {
+.portfolio-list-work {
     display: flex;
     flex-wrap: wrap;
     gap: 30px;
 }
 
+ .portfolio-list-work img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+ }
+
+.portfolio-work-box {
+    border-right: 1px solid var(--portfolio-border-color);
+    border-bottom: 1px solid var(--portfolio-border-color);
+    border-left: 1px solid var(--portfolio-border-color);
+    padding: 20px 24px;
+}
+
 .portfolio-title {
-    margin-top: 20px;
     margin-bottom: 4px;
-    margin-left: 20px;
     color: var(--primary-text-color);
 font-size: 18px;
 line-height: 2;
@@ -339,8 +371,6 @@ letter-spacing: 0.06em;
 }
 
 .portfolio-text {
-    margin-bottom: 20px;
-     margin-left: 20px;
 font-size: 16px;
 line-height: 1.88;
 color: var(--secondary-text-color);
